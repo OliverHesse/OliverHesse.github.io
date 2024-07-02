@@ -4,6 +4,7 @@ import cliTextEditorGif from './projectgif/CLITextEditorGif.gif';
 import basicInterpreterGif from './projectgif/BasicInterpreterGif.gif';
 import curve from "./projectgif/CurveGif.gif"
 import financeApp from "./projectgif/ChildFinanceAppGif.gif"
+import LinksGithubLogo from "./generalmedia/GitHubLogo.png"
 import './App.css';
 import React , { useState }from 'react';
 import ReactDOM from 'react-dom/client';
@@ -48,10 +49,9 @@ function ProjectView(){
     {"name":"Basic Interpreter","Image":basicInterpreterGif,"link":"https://github.com/OliverHesse/CustomInterpreter"},
     {"name":"Bézier curve","Image":curve,"link":"https://github.com/OliverHesse/B-zier-curve"},
     {"name":"Child Finance App","Image":financeApp,"link":"https://github.com/OliverHesse/Child-Finance-App"},
-    {"name":"Project 5","Image":"fake"},
-    {"name":"Project 6","Image":"fake"}
+    
   ]
-  let size = 6;
+  let size = 4;
   let resetAnimations = false;
   const clickHandler =  (cardOrientation) =>{
     setReset(false);
@@ -84,6 +84,17 @@ function ProjectView(){
   )
 }
 
+function PersonalLinks(){
+
+  return (
+    <div className='linkHolder'>
+      <a href='https://github.com/OliverHesse'>
+        <img src={LinksGithubLogo} className='githubLink'></img>
+      </a>
+
+    </div>
+  )
+}
 function App() {
   return (
     <div className="App">
@@ -92,7 +103,9 @@ function App() {
         <h6>Wales, He/Him, 18</h6>
         <p className = "paragraph">I enjoy programming lots of things. right now im trying out minecraft plugins because... it is fun!</p>
         <p className = "paragraph">I am primarily a Python developer. However, I also have experience in JavaScript, Rust and Java.</p>
+        <p className='paragraph'>email: oliver.f.p.hesse@gmail.com</p>
         <ProjectView />
+        <PersonalLinks />
       </header>
       
     </div>
